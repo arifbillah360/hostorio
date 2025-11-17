@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Hostorio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-server"></i>
+                    <span>HOSTORIO</span>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+8801779440297</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>mail@hostorio.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Web Hosting <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">WordPress Hosting</a></li>
+                        <li><a href="#">Turbo Hosting</a></li>
+                        <li><a href="#">Reseller Hosting</a></li>
+                        <li><a href="#">Student Hosting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Business Email</a></li>
+                <li><a href="#">VPS</a></li>
+                <li class="dropdown">
+                    <a href="#">Domain <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Register Domain</a></li>
+                        <li><a href="#">Transfer Domain</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Offer</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="server-status.html">Server Status</a></li>
+                <li><a href="support.html" class="active">Support</a></li>
+                <li><a href="#" class="btn-account">My Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Help & Support Center</h1>
+            <p>We're here to help you succeed with your hosting</p>
+        </div>
+    </section>
+
+    <!-- Search Support Section -->
+    <section class="support-search">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="supportSearch" placeholder="Search for help articles, tutorials, and guides...">
+                <button type="button" class="search-btn">Search</button>
+            </div>
+            <div class="popular-searches">
+                <span>Popular:</span>
+                <a href="#">Setup Email</a>
+                <a href="#">Install WordPress</a>
+                <a href="#">Transfer Website</a>
+                <a href="#">SSL Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Options Section -->
+    <section class="support-options-section">
+        <div class="container">
+            <h2 class="section-title">How Can We Help You?</h2>
+            <p class="section-description">Choose the best support option for your needs</p>
+
+            <div class="support-methods">
+                <div class="support-method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Submit a Ticket</h3>
+                    <p>Get technical support from our expert team. Average response time: 2 hours</p>
+                    <button class="method-button" onclick="showTicketForm()">Create Ticket</button>
+                </div>
+
+                <div class="support-method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team in real-time for instant assistance</p>
+                    <button class="method-button">Start Chat</button>
+                    <span class="availability online"><i class="fas fa-circle"></i> Online Now</span>
+                </div>
+
+                <div class="support-method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with our support team for urgent matters</p>
+                    <a href="tel:+8801779440297" class="method-button">+8801779440297</a>
+                    <span class="availability">Available 7 days/week</span>
+                </div>
+
+                <div class="support-method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Send us detailed questions and receive comprehensive answers</p>
+                    <a href="mailto:mail@hostorio.com" class="method-button">mail@hostorio.com</a>
+                    <span class="availability">24-hour response time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Ticket Form (Hidden by default) -->
+    <section class="ticket-form-section" id="ticketFormSection" style="display: none;">
+        <div class="container">
+            <div class="ticket-form-wrapper">
+                <h2>Submit a Support Ticket</h2>
+                <p>Please provide as much detail as possible to help us assist you quickly</p>
+
+                <form class="support-ticket-form" id="ticketForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ticketName">Your Name *</label>
+                            <input type="text" id="ticketName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketEmail">Email Address *</label>
+                            <input type="email" id="ticketEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketDomain">Domain Name</label>
+                        <input type="text" id="ticketDomain" placeholder="yourdomain.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketDepartment">Department *</label>
+                        <select id="ticketDepartment" required>
+                            <option value="">Select Department</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing</option>
+                            <option value="sales">Sales</option>
+                            <option value="migration">Website Migration</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketPriority">Priority *</label>
+                        <select id="ticketPriority" required>
+                            <option value="">Select Priority</option>
+                            <option value="low">Low - General Question</option>
+                            <option value="medium">Medium - Service Issue</option>
+                            <option value="high">High - Site Down/Critical</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketSubject">Subject *</label>
+                        <input type="text" id="ticketSubject" placeholder="Brief description of your issue" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketMessage">Detailed Description *</label>
+                        <textarea id="ticketMessage" rows="8" placeholder="Please describe your issue in detail. Include any error messages, steps to reproduce, etc." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketAttachment">Attachments (Optional)</label>
+                        <input type="file" id="ticketAttachment" multiple>
+                        <small>Accepted formats: jpg, png, pdf, txt (Max 5MB)</small>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> Submit Ticket
+                        </button>
+                        <button type="button" class="cancel-button" onclick="hideTicketForm()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base Section -->
+    <section class="knowledge-base">
+        <div class="container">
+            <h2 class="section-title">Knowledge Base</h2>
+            <p class="section-description">Browse our comprehensive collection of guides and tutorials</p>
+
+            <div class="kb-categories">
+                <div class="kb-category">
+                    <div class="kb-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Getting Started</h3>
+                    <ul class="kb-articles">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> How to Buy Web Hosting</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> First Steps After Purchase</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Accessing cPanel</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Setting Up Your Domain</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Understanding Hosting Plans</a></li>
+                    </ul>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="kb-category">
+                    <div class="kb-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>WordPress</h3>
+                    <ul class="kb-articles">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Installing WordPress</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> WordPress Security Best Practices</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Optimizing WordPress Speed</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> WordPress Backup & Restore</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Troubleshooting Common Issues</a></li>
+                    </ul>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="kb-category">
+                    <div class="kb-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <ul class="kb-articles">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Creating Email Accounts</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Configuring Email Client</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Email Forwarding Setup</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Spam Filter Settings</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Troubleshooting Email Issues</a></li>
+                    </ul>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="kb-category">
+                    <div class="kb-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Security & SSL</h3>
+                    <ul class="kb-articles">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Installing Free SSL Certificate</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Securing Your Website</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Password Best Practices</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Malware Removal Guide</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Two-Factor Authentication</a></li>
+                    </ul>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="kb-category">
+                    <div class="kb-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Databases</h3>
+                    <ul class="kb-articles">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Creating MySQL Database</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Managing phpMyAdmin</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Database Backup & Restore</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Optimizing Database Performance</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Remote Database Access</a></li>
+                    </ul>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="kb-category">
+                    <div class="kb-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Migration & Transfer</h3>
+                    <ul class="kb-articles">
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Website Migration Guide</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Transferring Domain</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Moving to Hostorio</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> DNS Settings Configuration</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Email Migration</a></li>
+                    </ul>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title white">Frequently Asked Questions</h2>
+            <p class="section-description white">Quick answers to common questions</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I buy web hosting?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply choose your preferred hosting package from our plans, click the "BUY NOW" button, and follow the checkout process. You can pay using various payment methods including bKash, Nagad, or bank transfer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Which web hosting plan do I need to choose?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It depends on your website type: Standard for portfolios, Professional for blogs, Business for business websites, and Diamond for eCommerce sites. If you're unsure, contact our support team for personalized recommendations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I upgrade my hosting package?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade your hosting package at any time. Simply contact our support team, and we'll help you seamlessly migrate to a higher-tier plan with no downtime.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer free website migration?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer free website migration services for all new customers. Our technical team will handle the entire transfer process to ensure your website is moved safely with zero downtime.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is your refund policy?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day money-back guarantee. If you're not satisfied with our service within the first 30 days, contact us for a full refund, no questions asked.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I access my cPanel?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can access cPanel by visiting yourdomain.com/cpanel or through the client area. Your cPanel login credentials are sent to your email after account activation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What backup options do you provide?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide free daily automated backups for all hosting accounts. You can restore your backups anytime from cPanel. We keep backups for 30 days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is SSL certificate included?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide free SSL certificates for all domains hosted with us. SSL certificates are automatically installed and renewed, ensuring your website is always secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorials Section -->
+    <section class="video-tutorials">
+        <div class="container">
+            <h2 class="section-title">Video Tutorials</h2>
+            <p class="section-description">Watch step-by-step video guides</p>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <span class="video-duration">5:32</span>
+                    </div>
+                    <h4>Getting Started with cPanel</h4>
+                    <p>Learn the basics of cPanel control panel</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <span class="video-duration">8:15</span>
+                    </div>
+                    <h4>Installing WordPress</h4>
+                    <p>Step-by-step WordPress installation guide</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <span class="video-duration">6:45</span>
+                    </div>
+                    <h4>Setting Up Email Accounts</h4>
+                    <p>Create and configure email accounts</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <span class="video-duration">10:20</span>
+                    </div>
+                    <h4>Website Backup & Restore</h4>
+                    <p>How to backup and restore your website</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-server"></i>
+                        <span>HOSTORIO</span>
+                    </div>
+                    <p class="footer-description">Hostorio is a popular web hosting services provider in Bangladesh, offering reliable, fast, and affordable hosting solutions for businesses and individuals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="server-status.html">Server Status</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kanchan, Rupganj, Narayanganj</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+8801779440297</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>mail@hostorio.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hostorio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Show/Hide Ticket Form
+        function showTicketForm() {
+            document.getElementById('ticketFormSection').style.display = 'block';
+            document.getElementById('ticketFormSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hideTicketForm() {
+            document.getElementById('ticketFormSection').style.display = 'none';
+        }
+
+        // Ticket Form Submission
+        document.getElementById('ticketForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your support ticket has been submitted successfully! We will respond within 2 hours.');
+            hideTicketForm();
+            this.reset();
+        });
+
+        // Support Search
+        document.getElementById('supportSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value;
+                if (query) {
+                    alert('Searching for: ' + query);
+                    // Implement actual search functionality here
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status - Hostorio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-server"></i>
+                    <span>HOSTORIO</span>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+8801779440297</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>mail@hostorio.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Web Hosting <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">WordPress Hosting</a></li>
+                        <li><a href="#">Turbo Hosting</a></li>
+                        <li><a href="#">Reseller Hosting</a></li>
+                        <li><a href="#">Student Hosting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Business Email</a></li>
+                <li><a href="#">VPS</a></li>
+                <li class="dropdown">
+                    <a href="#">Domain <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Register Domain</a></li>
+                        <li><a href="#">Transfer Domain</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Offer</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="server-status.html" class="active">Server Status</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="#" class="btn-account">My Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Server Status</h1>
+            <p>Real-time monitoring of our infrastructure and services</p>
+        </div>
+    </section>
+
+    <!-- Overall Status Section -->
+    <section class="overall-status">
+        <div class="container">
+            <div class="status-hero">
+                <div class="status-icon operational">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>All Systems Operational</h2>
+                <p>Last updated: <span id="lastUpdated">Just now</span></p>
+            </div>
+
+            <div class="uptime-stats">
+                <div class="uptime-card">
+                    <h4>Current Uptime</h4>
+                    <div class="uptime-value">99.98%</div>
+                    <p>Last 30 days</p>
+                </div>
+                <div class="uptime-card">
+                    <h4>Response Time</h4>
+                    <div class="uptime-value">45ms</div>
+                    <p>Average</p>
+                </div>
+                <div class="uptime-card">
+                    <h4>Incidents</h4>
+                    <div class="uptime-value">0</div>
+                    <p>Last 7 days</p>
+                </div>
+                <div class="uptime-card">
+                    <h4>Scheduled Maintenance</h4>
+                    <div class="uptime-value">None</div>
+                    <p>Upcoming</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Status Section -->
+    <section class="services-status">
+        <div class="container">
+            <h2 class="section-title">Services Status</h2>
+            <p class="section-description">Real-time status of all our hosting services</p>
+
+            <div class="status-list">
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>Web Hosting Services</h4>
+                            <p>All shared hosting servers are running smoothly</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.99%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>cPanel & WHM</h4>
+                            <p>Control panel access is working normally</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.97%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>Email Services</h4>
+                            <p>All email servers operational, no delays</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.98%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>MySQL Databases</h4>
+                            <p>Database servers responding normally</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.99%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>FTP Services</h4>
+                            <p>File transfer services working properly</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.96%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>DNS Servers</h4>
+                            <p>Domain name resolution operating normally</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">100%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>Backup Systems</h4>
+                            <p>Automated backups running on schedule</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.95%</div>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-info">
+                        <div class="status-badge operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </div>
+                        <div class="status-details">
+                            <h4>SSL Certificates</h4>
+                            <p>SSL provisioning and renewal working</p>
+                        </div>
+                    </div>
+                    <div class="status-uptime">99.98%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server Performance Section -->
+    <section class="server-performance">
+        <div class="container">
+            <h2 class="section-title white">Server Performance Metrics</h2>
+            <p class="section-description white">Live performance data from our infrastructure</p>
+
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <div class="performance-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4>Server Load</h4>
+                    <div class="performance-bar">
+                        <div class="bar-fill" style="width: 35%;"></div>
+                    </div>
+                    <p class="performance-value">35% <span class="performance-status good">Low</span></p>
+                </div>
+
+                <div class="performance-card">
+                    <div class="performance-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <h4>Memory Usage</h4>
+                    <div class="performance-bar">
+                        <div class="bar-fill" style="width: 48%;"></div>
+                    </div>
+                    <p class="performance-value">48% <span class="performance-status good">Normal</span></p>
+                </div>
+
+                <div class="performance-card">
+                    <div class="performance-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Disk Usage</h4>
+                    <div class="performance-bar">
+                        <div class="bar-fill" style="width: 52%;"></div>
+                    </div>
+                    <p class="performance-value">52% <span class="performance-status good">Normal</span></p>
+                </div>
+
+                <div class="performance-card">
+                    <div class="performance-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h4>Network Traffic</h4>
+                    <div class="performance-bar">
+                        <div class="bar-fill" style="width: 42%;"></div>
+                    </div>
+                    <p class="performance-value">42% <span class="performance-status good">Normal</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uptime History Section -->
+    <section class="uptime-history">
+        <div class="container">
+            <h2 class="section-title">30-Day Uptime History</h2>
+            <p class="section-description">Daily uptime percentage for the last 30 days</p>
+
+            <div class="uptime-chart">
+                <div class="chart-bars">
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.8%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.8%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.7%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.9%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="100%"><span class="day-status operational"></span></div>
+                    <div class="day-bar" style="height: 100%;" title="99.8%"><span class="day-status operational"></span></div>
+                </div>
+                <div class="chart-legend">
+                    <span><i class="fas fa-circle operational-dot"></i> Operational (99%+)</span>
+                    <span><i class="fas fa-circle degraded-dot"></i> Degraded (95-99%)</span>
+                    <span><i class="fas fa-circle down-dot"></i> Down (&lt;95%)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Incidents Section -->
+    <section class="incidents-section">
+        <div class="container">
+            <h2 class="section-title">Recent Incidents</h2>
+            <p class="section-description">History of service incidents and resolutions</p>
+
+            <div class="incidents-list">
+                <div class="incident-item resolved">
+                    <div class="incident-header">
+                        <span class="incident-badge resolved"><i class="fas fa-check-circle"></i> Resolved</span>
+                        <span class="incident-date">3 days ago</span>
+                    </div>
+                    <h4>Scheduled Maintenance - Database Optimization</h4>
+                    <p>Performed routine database optimization and server updates. Service was briefly interrupted for 5 minutes.</p>
+                    <div class="incident-timeline">
+                        <div class="timeline-item">
+                            <strong>Resolved:</strong> All systems back to normal operation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="incident-item resolved">
+                    <div class="incident-header">
+                        <span class="incident-badge resolved"><i class="fas fa-check-circle"></i> Resolved</span>
+                        <span class="incident-date">12 days ago</span>
+                    </div>
+                    <h4>Brief Network Latency</h4>
+                    <p>Some users experienced increased response times due to network provider issues. Resolved within 15 minutes.</p>
+                    <div class="incident-timeline">
+                        <div class="timeline-item">
+                            <strong>Resolved:</strong> Network connectivity restored to normal
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-incidents">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>No major incidents in the last 30 days. Our systems are running smoothly!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe to Updates -->
+    <section class="subscribe-updates">
+        <div class="container">
+            <h2 class="section-title white">Stay Updated</h2>
+            <p class="section-description white">Subscribe to receive notifications about service status and maintenance</p>
+
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-button">
+                    <i class="fas fa-bell"></i> Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-server"></i>
+                        <span>HOSTORIO</span>
+                    </div>
+                    <p class="footer-description">Hostorio is a popular web hosting services provider in Bangladesh, offering reliable, fast, and affordable hosting solutions for businesses and individuals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="server-status.html">Server Status</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kanchan, Rupganj, Narayanganj</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+8801779440297</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>mail@hostorio.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hostorio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('lastUpdated').textContent = timeString;
+        }
+
+        updateTimestamp();
+        setInterval(updateTimestamp, 60000); // Update every minute
+
+        // Subscribe form
+        document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! You will receive status updates via email.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
