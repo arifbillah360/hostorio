@@ -2413,3 +2413,466 @@ a:focus {
         font-size: 24px;
     }
 }
+
+/* ===== BUSINESS EMAIL PAGE ===== */
+.email-packages {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.email-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.email-highlight {
+    background: var(--light-gray);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.email-highlight p {
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+.email-benefits {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0A2D7A 100%);
+    text-align: center;
+}
+
+.email-features {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.features-grid-email {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.email-feature-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.email-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.email-feature-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.email-feature-icon i {
+    font-size: 36px;
+    color: var(--white);
+}
+
+.email-feature-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.email-feature-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.bespoke-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.bespoke-content {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0A2D7A 100%);
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--white);
+}
+
+.bespoke-content h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.bespoke-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.free-trial {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.trial-content {
+    background: var(--white);
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.trial-badge {
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.trial-content h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.trial-content > p {
+    font-size: 20px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.trial-features {
+    list-style: none;
+    text-align: left;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.trial-features li {
+    padding: 12px 0;
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+.trial-features i {
+    color: var(--primary-orange);
+    margin-right: 12px;
+}
+
+.jellyfish-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.jellyfish-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.jellyfish-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.jellyfish-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+}
+
+.jellyfish-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.jellyfish-features {
+    list-style: none;
+}
+
+.jellyfish-features li {
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.jellyfish-features i {
+    color: var(--primary-orange);
+    font-size: 18px;
+}
+
+.jellyfish-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jellyfish-icon {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0A2D7A 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(12, 55, 154, 0.3);
+}
+
+.jellyfish-icon i {
+    font-size: 100px;
+    color: var(--primary-orange);
+}
+
+.tech-specs {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.specs-table {
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+.specs-table table {
+    width: 100%;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.specs-table thead {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.specs-table th {
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.specs-table th:first-child {
+    text-align: left;
+}
+
+.specs-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #E9ECEF;
+    text-align: center;
+}
+
+.specs-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.specs-table tr:hover {
+    background: var(--light-gray);
+}
+
+.specs-category td {
+    background: #F0F3F7;
+    font-weight: 700;
+    color: var(--primary-blue);
+    padding: 12px 20px;
+}
+
+.specs-table i.fa-check {
+    color: #10B981;
+    font-size: 18px;
+}
+
+.migration-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0A2D7A 100%);
+}
+
+.migration-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.migration-step {
+    text-align: center;
+    color: var(--white);
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 auto 25px;
+    box-shadow: 0 10px 30px rgba(255, 120, 0, 0.3);
+}
+
+.migration-step h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.migration-step p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.why-hostorio-email {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.why-card {
+    background: var(--light-gray);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.why-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.why-icon i {
+    font-size: 36px;
+    color: var(--white);
+}
+
+.why-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/* ===== RESPONSIVE STYLES FOR BUSINESS EMAIL ===== */
+@media (max-width: 992px) {
+    .email-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid-email {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jellyfish-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .migration-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid-email {
+        grid-template-columns: 1fr;
+    }
+
+    .bespoke-content {
+        padding: 40px 30px;
+    }
+
+    .bespoke-content h2 {
+        font-size: 28px;
+    }
+
+    .trial-content {
+        padding: 40px 30px;
+    }
+
+    .trial-content h2 {
+        font-size: 28px;
+    }
+
+    .jellyfish-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .jellyfish-icon i {
+        font-size: 70px;
+    }
+
+    .specs-table {
+        font-size: 14px;
+    }
+
+    .specs-table th,
+    .specs-table td {
+        padding: 10px;
+    }
+}
