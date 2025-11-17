@@ -2168,3 +2168,248 @@ a:focus {
         flex-direction: column;
     }
 }
+
+/* ===== TURBO HOSTING PAGE ===== */
+.turbo-intro {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.intro-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.intro-content p {
+    font-size: 18px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.turbo-packages {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.turbo-badge {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #E66D00 100%);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.advanced-features {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0A2D7A 100%);
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature-column ul {
+    list-style: none;
+}
+
+.feature-column li {
+    color: var(--white);
+    padding: 12px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.6;
+}
+
+.feature-column i {
+    color: var(--primary-orange);
+    font-size: 16px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.key-features {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.key-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.key-feature-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.key-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #E66D00 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.feature-icon i {
+    font-size: 42px;
+    color: var(--white);
+}
+
+.key-feature-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.key-feature-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+.contact-support {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.support-banner {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0A2D7A 100%);
+    padding: 50px 60px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.support-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.support-content p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.support-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.whatsapp-button,
+.contact-button {
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.whatsapp-button {
+    background: #25D366;
+    color: var(--white);
+}
+
+.whatsapp-button:hover {
+    background: #20BA5A;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.contact-button {
+    background: var(--primary-orange);
+    color: var(--white);
+}
+
+.contact-button:hover {
+    background: #E66D00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 120, 0, 0.4);
+}
+
+/* ===== RESPONSIVE STYLES FOR TURBO HOSTING ===== */
+@media (max-width: 992px) {
+    .features-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .key-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-banner {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .support-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .whatsapp-button,
+    .contact-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-content h2 {
+        font-size: 24px;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+
+    .support-banner {
+        padding: 40px 30px;
+    }
+
+    .support-content h2 {
+        font-size: 24px;
+    }
+}
